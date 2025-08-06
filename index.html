@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roni Vemi for PR - SUSC 2025</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #4a148c, #6a1b9a, #8e24aa);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(74, 20, 140, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: #e1bee7;
+        }
+        
+        /* Sections */
+        .section {
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Cover Page */
+        .hero {
+            background: linear-gradient(135deg, #4a148c, #6a1b9a);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="%23ffffff" opacity="0.1"/></svg>');
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .campaign-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #e1bee7;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #4a148c;
+            border: 5px solid white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .position {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e1bee7;
+        }
+        
+        .slogan {
+            font-size: 2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        
+        /* Introduction */
+        .intro {
+            background: white;
+            color: #333;
+        }
+        
+        .intro h2 {
+            font-size: 2.5rem;
+            color: #4a148c;
+            margin-bottom: 2rem;
+        }
+        
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .bio-box {
+            background: #f3e5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        
+        .bio-item {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .bio-item strong {
+            color: #4a148c;
+        }
+        
+        /* Vision & Mission */
+        .vision {
+            background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+            color: white;
+        }
+        
+        .vision h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .vision-box,
+        .mission-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .vision-box h3,
+        .mission-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Campaign Pillars */
+        .pillars {
+            background: white;
+            color: #333;
+        }
+        
+        .pillars h2 {
+            font-size: 2.5rem;
+            color: #4a148c;
+            margin-bottom: 3rem;
+        }
+        
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .pillar-box {
+            background: #f3e5f5;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .pillar-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pillar-box .icon {
+            color: #4a148c;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pillar-box h3 {
+            color: #4a148c;
+            margin-bottom: 1rem;
+        }
+        
+        /* Why Me */
+        .why-me {
+            background: linear-gradient(135deg, #8e24aa, #ab47bc);
+            color: white;
+        }
+        
+        .why-me h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .qualities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .quality {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .quote-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+        
+        /* Strategy */
+        .strategy {
+            background: white;
+            color: #333;
+        }
+        
+        .strategy h2 {
+            font-size: 2.5rem;
+            color: #4a148c;
+            margin-bottom: 3rem;
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .strategy-box {
+            background: #f3e5f5;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .strategy-box h3 {
+            color: #4a148c;
+            margin-bottom: 1rem;
+        }
+        
+        /* Team */
+        .team {
+            background: linear-gradient(135deg, #4a148c, #6a1b9a);
+            color: white;
+        }
+        
+        .team h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .team-structure {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+        
+        .team-level {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: white;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-slogan {
+            font-size: 2rem;
+            font-style: italic;
+            margin: 2rem 0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            background: white;
+            color: #4a148c;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #e1bee7;
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .slogan {
+                font-size: 1.5rem;
+            }
+            
+            .vision-mission-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .qualities-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">VERONICAH MBUVI</div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#intro" class="nav-link">About</a></li>
+                <li><a href="#vision" class="nav-link">Vision</a></li>
+                <li><a href="#pillars" class="nav-link">Pillars</a></li>
+                <li><a href="#why-me" class="nav-link">Why Me</a></li>
+                <li><a href="#strategy" class="nav-link">Strategy</a></li>
+                <li><a href="#cta" class="nav-link">Vote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page 1 - Cover Page -->
+    <section id="hero" class="section hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="campaign-photo">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1>VERONICAH MBUVI for PR</h1>
+                <p class="position">Public Relations Representative – SUSC 2025</p>
+                <p class="slogan">Your Story. Our Voice. One Strathmore.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 2 - Introduction -->
+    <section id="intro" class="section intro">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Meet Your Next PR</h2>
+                <p>I'm running to serve as your next Public Relations Representative because I believe communication is the bridge between leadership and students. My goal is to make PR more than announcements — a platform for engagement, visibility, and representation.</p>
+                
+                <div class="bio-box">
+                    <div class="bio-item"><strong>Name:</strong> VERONICAH MBUVI</div>
+                    <div class="bio-item"><strong>School:</strong> School of Computing and Engineering Sciences</div>
+                    <div class="bio-item"><strong>Year of Study:</strong> 3.1</div>
+                    <div class="bio-item"><strong>Fun Fact:</strong> I believe every student has a story worth sharing, and I'm here to amplify those voices!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3 - Vision & Mission -->
+    <section id="vision" class="section vision">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Where We're Headed</h2>
+                <div class="vision-mission-grid">
+                    <div class="vision-box">
+                        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Vision</h3>
+                        <p>"A vibrant, connected Strathmore where every student's voice is heard and celebrated."</p>
+                    </div>
+                    <div class="mission-box">
+                        <div class="icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Mission</h3>
+                        <p>"To create engaging, transparent, and inclusive communication that bridges students and leadership."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 4 - Campaign Pillars -->
+    <section id="pillars" class="section pillars">
+        <div class="container">
+            <div class="fade-in">
+                <h2>What I Stand For</h2>
+                <div class="pillars-grid">
+                    <div class="pillar-box">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h3>Student-Centered Communication</h3>
+                        <p>Listening as much as we speak.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <div class="icon"><i class="fas fa-palette"></i></div>
+                        <h3>Creative & Engaging Content</h3>
+                        <p>Reels, takeovers, polls, and challenges.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <div class="icon"><i class="fas fa-eye"></i></div>
+                        <h3>Transparency & Access</h3>
+                        <p>Clear updates for every student, every time.</p>
+                    </div>
+                    <div class="pillar-box">
+                        <div class="icon"><i class="fas fa-star"></i></div>
+                        <h3>Celebrating Student Stories</h3>
+                        <p>Showcasing talents, clubs, and successes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 5 - Why Me? -->
+    <section id="why-me" class="section why-me">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Why I'm the Right Choice</h2>
+                <p>I may not have held the PR title before, but I bring...</p>
+                
+                <div class="qualities-list">
+                    <div class="quality">
+                        <h3><i class="fas fa-heart"></i> Approachability & Empathy</h3>
+                    </div>
+                    <div class="quality">
+                        <h3><i class="fas fa-mobile-alt"></i> Social Media Know-how</h3>
+                    </div>
+                    <div class="quality">
+                        <h3><i class="fas fa-clock"></i> Reliability & Organization</h3>
+                    </div>
+                    <div class="quality">
+                        <h3><i class="fas fa-lightbulb"></i> Fresh Perspective</h3>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    "What I lack in past titles, I make up for in passion, energy, and the willingness to put students first."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 6 - Strategy -->
+    <section id="strategy" class="section strategy">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Turning Ideas into Action</h2>
+                <div class="strategy-grid">
+                    <div class="strategy-box">
+                        <h3><i class="fas fa-share-alt"></i> Social Media Plan</h3>
+                        <p>Interactive posts, student takeovers, polls to keep everyone engaged and connected.</p>
+                    </div>
+                    <div class="strategy-box">
+                        <h3><i class="fas fa-handshake"></i> Ground Engagement</h3>
+                        <p>Class visits, posters, team captains in each school for direct student connection.</p>
+                    </div>
+                    <div class="strategy-box">
+                        <h3><i class="fas fa-comments"></i> Feedback Loop</h3>
+                        <p>Monthly surveys, "PR Pulse" reports, open Q&As to ensure your voice is heard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 8 - Call to Action -->
+    <section id="cta" class="section cta">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Be Part of the Movement</h2>
+                <p class="cta-slogan">Your Story. Our Voice. One Strathmore.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn">Vote VERONICAH for PR</a>
+                    <a href="#" class="btn">Election Date: 5th September</a>
+                    <a href="#" class="btn"><i class="fab fa-instagram"></i> @r.oni_ca</a>
+                    <a href="#" class="btn"><i class="fab fa-whatsapp"></i> 0114809906</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Scroll animations
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.fade-in');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('visible');
+                }
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            updateActiveNav();
+            revealOnScroll();
+        });
+
+        // Initial calls
+        updateActiveNav();
+        revealOnScroll();
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(74, 20, 140, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(74, 20, 140, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
