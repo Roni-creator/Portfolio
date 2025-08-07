@@ -406,7 +406,7 @@
             background: #e1bee7;
             transform: translateY(-2px);
         }
-        
+      
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-menu {
@@ -450,6 +450,19 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .campaign-photo {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(128, 0, 128, 0.4); /* soft purple glow */
+  background: none;
+}
     </style>
 </head>
 <body>
@@ -459,8 +472,7 @@
     <section id="hero" class="section hero">
         <div class="container">
             <div class="hero-content fade-in">
-                <div class="campaign-photo">
-                    <i class="fas fa-user"></i>
+                <img src="images/Campaign-photo-1.jpg" alt="VERONICAH MBUVI" class="campaign-photo">
                 </div>
                 <h1>VERONICAH MBUVI'S PORTFOLIO</h1>
                 <p class="position">Public Relations Representative – SUSC 2025</p>
@@ -483,17 +495,6 @@
                     <div class="bio-item"><strong>Year of Study:</strong> 3.1</div>
                     <div class="bio-item"><strong>Fact:</strong> I believe every student has a story worth sharing, and I'm here to amplify those voices!</div>
                 </div>
-                
-                <!-- Photo Gallery -->
-                <div class="photo-gallery">
-                    <div class="gallery-photo" style="background-image: url('path-to-your-image1.jpg');">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <div class="gallery-photo" style="background-image: url('path-to-your-image2.jpg');">
-                        <i class="fas fa-users"></i>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -555,20 +556,18 @@
         <div class="container">
             <div class="fade-in">
                 <h2>Why I'm the Right Choice</h2>
-               
-                
                 <div class="qualities-list">
                     <div class="quality">
-                        <h3><i class="fas fa-heart"></i> Approachability & Empathy</h3>
+                        <h3><i class="fas fa-heart"></i> I take part in school activities</h3>
                     </div>
                     <div class="quality">
-                        <h3><i class="fas fa-mobile-alt"></i> Social Media Know-how</h3>
+                        <h3><i class="fas fa-mobile-alt"></i> I am well conversant with social media trends</h3>
                     </div>
+                    <!-- <div class="quality">
+                        <h3><i class="fas fa-clock"></i> I am Reliable </h3>
+                    </div> -->
                     <div class="quality">
-                        <h3><i class="fas fa-clock"></i> Reliability & Organization</h3>
-                    </div>
-                    <div class="quality">
-                        <h3><i class="fas fa-lightbulb"></i> Fresh Perspective</h3>
+                        <h3><i class="fas fa-lightbulb"></i> I Bring a Fresh Perspective</h3>
                     </div>
                 </div>
                 
