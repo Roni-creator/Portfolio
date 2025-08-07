@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roni Vemi for PR - SUSC 2025</title>
+    <title>VERONICAH MBUVI's PORTFOLIO</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -23,26 +23,7 @@
             background: linear-gradient(135deg, #4a148c, #6a1b9a, #8e24aa);
         }
         
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(74, 20, 140, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+}
         
         .logo {
             color: white;
@@ -71,7 +52,7 @@
         /* Sections */
         .section {
             min-height: 100vh;
-            padding: 6rem 2rem 2rem;
+            padding: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -118,6 +99,50 @@
             font-size: 4rem;
             color: #4a148c;
             border: 5px solid white;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Photo gallery styles */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-photo {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            background: #e1bee7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #4a148c;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .section-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background: #e1bee7;
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #4a148c;
+            background-size: cover;
+            background-position: center;
         }
         
         .hero h1 {
@@ -428,21 +453,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">VERONICAH MBUVI</div>
-            <ul class="nav-menu">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#intro" class="nav-link">About</a></li>
-                <li><a href="#vision" class="nav-link">Vision</a></li>
-                <li><a href="#pillars" class="nav-link">Pillars</a></li>
-                <li><a href="#why-me" class="nav-link">Why Me</a></li>
-                <li><a href="#strategy" class="nav-link">Strategy</a></li>
-                <li><a href="#cta" class="nav-link">Vote</a></li>
-            </ul>
-        </div>
-    </nav>
+
 
     <!-- Page 1 - Cover Page -->
     <section id="hero" class="section hero">
@@ -451,7 +462,7 @@
                 <div class="campaign-photo">
                     <i class="fas fa-user"></i>
                 </div>
-                <h1>VERONICAH MBUVI for PR</h1>
+                <h1>VERONICAH MBUVI'S PORTFOLIO</h1>
                 <p class="position">Public Relations Representative – SUSC 2025</p>
                 <p class="slogan">Your Story. Our Voice. One Strathmore.</p>
             </div>
@@ -463,13 +474,30 @@
         <div class="container">
             <div class="fade-in">
                 <h2>Meet Your Next PR</h2>
-                <p>I'm running to serve as your next Public Relations Representative because I believe communication is the bridge between leadership and students. My goal is to make PR more than announcements — a platform for engagement, visibility, and representation.</p>
-                
+                <!-- <p>I'm running to serve as your next Public Relations Representative because I believe communication is the bridge between leadership and students. My goal is to make PR more than announcements — a platform for engagement, visibility, and representation.</p> -->
+                <p>Hello there! You are probably wondering what PR (Public Relations) is all about. Let me fill you in! PR is not just about making announcements and giving reports. I believe it's about telling stories, connecting the Student leadership to students, and building a space where all Strathmore Students feel represented and included.</p>
+                <h2>Let Me Introduce Myself</h2>
                 <div class="bio-box">
                     <div class="bio-item"><strong>Name:</strong> VERONICAH MBUVI</div>
                     <div class="bio-item"><strong>School:</strong> School of Computing and Engineering Sciences</div>
                     <div class="bio-item"><strong>Year of Study:</strong> 3.1</div>
-                    <div class="bio-item"><strong>Fun Fact:</strong> I believe every student has a story worth sharing, and I'm here to amplify those voices!</div>
+                    <div class="bio-item"><strong>Fact:</strong> I believe every student has a story worth sharing, and I'm here to amplify those voices!</div>
+                </div>
+                
+                <!-- Photo Gallery -->
+                <div class="photo-gallery">
+                    <div class="gallery-photo" style="background-image: url('path-to-your-image1.jpg');">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="gallery-photo" style="background-image: url('path-to-your-image2.jpg');">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="gallery-photo" style="background-image: url('path-to-your-image3.jpg');">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="gallery-photo" style="background-image: url('path-to-your-image4.jpg');">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -552,6 +580,11 @@
                 <div class="quote-box">
                     "What I lack in past titles, I make up for in passion, energy, and the willingness to put students first."
                 </div>
+                
+                <!-- Add a photo showing leadership/community involvement -->
+                <div class="section-photo" style="background-image: url('path-to-leadership-photo.jpg');">
+                    <i class="fas fa-handshake"></i>
+                </div>
             </div>
         </div>
     </section>
@@ -579,6 +612,39 @@
         </div>
     </section>
 
+    <!-- Page 7 - Team -->
+    <section id="team" class="section team">
+        <div class="container">
+            <div class="fade-in">
+                <h2>The PR Network</h2>
+                <div class="team-structure">
+                    <div class="team-level">
+                        <h3><i class="fas fa-crown"></i> Head Candidate</h3>
+                        <p>VERONICAH MBUVI - Leading the vision and strategy</p>
+                    </div>
+                    <div class="team-level">
+                        <h3><i class="fas fa-user-tie"></i> Main Campaign Manager</h3>
+                        <p>Coordinating all campaign activities</p>
+                    </div>
+                    <div class="team-level">
+                        <h3><i class="fas fa-school"></i> School Managers</h3>
+                        <p>1 per school - Your direct representatives</p>
+                    </div>
+                    <div class="team-level">
+                        <h3><i class="fas fa-users"></i> Class Managers</h3>
+                        <p>1 per year per school - Ensuring no one is left behind</p>
+                    </div>
+                </div>
+                <p>"This structure ensures that no student is left out of the conversation."</p>
+                
+                <!-- Team photo -->
+                <div class="section-photo" style="background-image: url('path-to-team-photo.jpg');">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Page 8 - Call to Action -->
     <section id="cta" class="section cta">
         <div class="container">
@@ -587,53 +653,18 @@
                 <p class="cta-slogan">Your Story. Our Voice. One Strathmore.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#" class="btn">Vote VERONICAH for PR</a>
-                    <a href="#" class="btn">Election Date: 5th September</a>
-                    <a href="#" class="btn"><i class="fab fa-instagram"></i> @r.oni_ca</a>
-                    <a href="#" class="btn"><i class="fab fa-whatsapp"></i> 0114809906</a>
+                    <a href="#" class="btn">Vote VERONICAH MBUVI for PR</a>
+                    <a href="#" class="btn">Election Date: [Date]</a>
+                    <a href="#" class="btn"><i class="fab fa-instagram"></i> @ronivemi</a>
+                    <a href="#" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp Contact</a>
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        function updateActiveNav() {
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
+        // Smooth scrolling for navigation links (keeping for potential future use)
+        // Navigation removed - users scroll naturally
 
         // Scroll animations
         function revealOnScroll() {
@@ -652,23 +683,11 @@
 
         // Event listeners
         window.addEventListener('scroll', () => {
-            updateActiveNav();
             revealOnScroll();
         });
 
         // Initial calls
-        updateActiveNav();
         revealOnScroll();
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(74, 20, 140, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(74, 20, 140, 0.95)';
-            }
-        });
     </script>
 </body>
 </html>
